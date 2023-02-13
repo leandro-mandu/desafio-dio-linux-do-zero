@@ -7,6 +7,20 @@
 cd /home
 rm -rf *
 
+userdel -f carlos
+userdel -f maria
+userdel -f joao
+userdel -f debora
+userdel -f sebastiana
+userdel -f roberto
+userdel -f josefina
+userdel -f amanda
+userdel -f rogerio
+
+groupdel GRP_ADM
+groupdel GRP_VEN
+groupdel GRP_SEC
+
 groupadd GRP_ADM GRP_VEN GRP_SEC
 mkdir publico adm ven sec
 
