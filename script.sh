@@ -21,27 +21,35 @@ groupdel GRP_ADM
 groupdel GRP_VEN
 groupdel GRP_SEC
 
-groupadd GRP_ADM GRP_VEN GRP_SEC
-mkdir publico adm ven sec
+groupadd GRP_ADM 
+groupadd GRP_VEN
+groupadd GRP_SEC
 
+mkdir publico
 chmod 777 publico
-chown root: GRP_ADM adm
+
+mkdir adm
+chown root:GRP_ADM adm
 chmod 770 adm
-chown root: GRP_VEN ven
+
+mkdir ven
+chown root:GRP_VEN ven
 chmod 770 ven
-chown root: GRP_SEC sec
+
+mkdir sec
+chown root:GRP_SEC sec
 chmod 770 sec
 
-useradd carlos -G GRP_ADM -s /bin/bash -m -p$(openssh passwd -crypt senha123) -e
-useradd maria -G GRP_ADM -s /bin/bash -m -p$(openssh passwd -crypt senha123) -e
-useradd joao -G GRP_ADM -s /bin/bash -m -p$(openssh passwd -crypt senha123) -e
+useradd carlos -G GRP_ADM -s /bin/bash -m -p$(openssl passwd -crypt senha123) -e
+useradd maria -G GRP_ADM -s /bin/bash -m -p$(openssl passwd -crypt senha123) -e
+useradd joao -G GRP_ADM -s /bin/bash -m -p$(openssl passwd -crypt senha123) -e
 
-useradd debora -G GRP_VEN -s /bin/bash -m -p$(openssh passwd -crypt senha123) -e
-useradd sebastiana -G GRP_VEN -s /bin/bash -m -p$(openssh passwd -crypt senha123) -e
-useradd roberto -G GRP_VEN -s /bin/bash -m -p$(openssh passwd -crypt senha123) -e
+useradd debora -G GRP_VEN -s /bin/bash -m -p$(openssl passwd -crypt senha123) -e
+useradd sebastiana -G GRP_VEN -s /bin/bash -m -p$(openssl passwd -crypt senha123) -e
+useradd roberto -G GRP_VEN -s /bin/bash -m -p$(openssl passwd -crypt senha123) -e
 
-useradd josefina -G GRP_SEC -s /bin/bash -m -p$(openssh passwd -crypt senha123) -e
-useradd amanda -G GRP_SEC -s /bin/bash -m -p$(openssh passwd -crypt senha123) -e
-useradd rogerio -G GRP_SEC -s /bin/bash -m -p$(openssh passwd -crypt senha123) -e
+useradd josefina -G GRP_SEC -s /bin/bash -m -p$(openssl passwd -crypt senha123) -e
+useradd amanda -G GRP_SEC -s /bin/bash -m -p$(openssl passwd -crypt senha123) -e
+useradd rogerio -G GRP_SEC -s /bin/bash -m -p$(openssl passwd -crypt senha123) -e
 
 
