@@ -12,5 +12,5 @@ cd /tmp
 wget https://github.com/denilsonbonatti/linux-site-dio/archive/refs/heads/main.zip
 unzip main.zip
 #provisionar site no server
-cp -R linux-site-dio/* /var/www/html/
+cp -R linux-site-dio-main/* /var/www/html/
 
